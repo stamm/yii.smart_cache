@@ -16,16 +16,16 @@ pecl install memcached
 Put in config/main.php to component section:
 
 ```php
-        'smartCache'=>array(
-            'class'=>'SmartCache',
-            'servers'=>array(
-                array(
-                    'host'=>'127.0.0.1',
-                    'port'=>11211,
-                ),
-            ),
-            'keyPrefix' => 'sc_',
+'smartCache'=>array(
+    'class'=>'SmartCache',
+    'servers'=>array(
+        array(
+            'host'=>'127.0.0.1',
+            'port'=>11211,
         ),
+    ),
+    'keyPrefix' => 'sc_',
+),
 ```
 
 And use it in your code:
