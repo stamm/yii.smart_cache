@@ -7,6 +7,14 @@ Smart cache work over memcached.
 
 ## Install
 
+It depends on memcached pecl extension, not memcache.
+
+```bash
+pecl install memcached
+```
+
+Put in config/main.php to component section:
+
 ```php
         'smartCache'=>array(
             'class'=>'SmartCache',
@@ -19,6 +27,20 @@ Smart cache work over memcached.
             'keyPrefix' => 'sc_',
         ),
 ```
+
+And use it in your code:
+
+```php
+$users = Yii::app()->smartCache->get($cacheKey, 100000000);
+if ($users !== false) {
+        return $users;
+}
+# ... big sql-query
+Yii::app()->smartCache->set($cacheKey, $users, CACHE_TIME);
+```
+Second argument is max waiting time, in microseconds. By default, 5000000 (5 second).
+
+You may global configure it by key *maxWaitingTime* or change for particular place in code.
 
 
 
