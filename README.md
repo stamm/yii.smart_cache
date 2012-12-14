@@ -5,6 +5,22 @@ It reduce fallback calls who execute hard-work code when you have many concurren
 Smart cache work over memcached.
 
 
+## Install
+
+```php
+        'smartCache'=>array(
+            'class'=>'SmartCache',
+            'servers'=>array(
+                array(
+                    'host'=>'127.0.0.1',
+                    'port'=>11211,
+                ),
+            ),
+            'keyPrefix' => 'sc_',
+        ),
+```
+
+
 
 ## When I need to use this?
 
