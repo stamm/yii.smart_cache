@@ -3,7 +3,7 @@
 /**
  * SmartCache
  * @author Alexander Emelyanov
- * @author Rustam Zagirov
+ * @author Rustam Zagirov <rustam@zagirov.name>
  * 
  * @version 0.1
  * 
