@@ -11,6 +11,7 @@
  */
 class SmartCache extends CMemCache
 {
+    public $useMemcached=true;
     /** Separates the waiting time into equal parts */
     const WAITING_TYPE_LINEAR = 1;
     /** Separates the waiting time on the part of members of a geometric progression */
